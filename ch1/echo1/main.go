@@ -1,5 +1,5 @@
 // echo1 prints its command-line arguments
-// go run main.go para1 para2 para3
+// go run celsius.go para1 para2 para3
 package main
 
 import (

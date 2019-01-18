@@ -18,8 +18,8 @@ import (
 var palette = []color.Color{color.White, color.Black, color.RGBA{0xff, 0xff, 0, 255}}
 
 const (
-	whiteIndex = 0 // first color in palette
-	blackIndex = 1 // next color in palette
+	whiteIndex  = 0 // first color in palette
+	blackIndex  = 1 // next color in palette
 	yellowIndex = 2
 )
 
@@ -46,6 +46,7 @@ func main() {
 	//lissajous(os.Stdout, float64(cycles))
 	lissajous(os.Stdout)
 }
+
 //func lissajous(out io.Writer, cycles float64) {
 func lissajous(out io.Writer) {
 	const (
@@ -64,8 +65,11 @@ func lissajous(out io.Writer) {
 		for t := 0.0; t < cycles*2*math.Pi; t += res {
 			x := math.Sin(t)
 			y := math.Sin(t*freq + phase)
-			img.SetColorIndex(size+int(x*size+0.5), size+int(y*size+0.5),
-				yellowIndex)
+			img.SetColorIndex(
+				size+int(x*size+0.5),
+				size+int(y*size+0.5), // 最后插入的逗号不会导致编译错误，这是Go编译器的一个特性
+				yellowIndex,
+			) // 小括弧另起一行缩进，和大括弧的风格保持一致
 		}
 		phase += 0.1
 		anim.Delay = append(anim.Delay, delay)

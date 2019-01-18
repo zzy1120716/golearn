@@ -1,10 +1,10 @@
 // 打印命令行参数
 // 使用flag包，解析命令行参数，获取标志参数
 // 在输入非法参数后，给出相应提示
-// go run main.go a bc def
-// go run main.go -s / a bc def
-// go run main.go -n a bc def
-// go run main.go -help
+// go run celsius.go a bc def
+// go run celsius.go -s / a bc def
+// go run celsius.go -n a bc def
+// go run celsius.go -help
 package main
 
 import (
