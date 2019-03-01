@@ -8,4 +8,7 @@ go build golearn/ch5/outline
 
 go build golearn/ch5/findlinks3
 ./findlinks3 https://www.qq.com
+
+go build golearn/ch5/title1
+./title1 http://www.hupu.com
 ```
