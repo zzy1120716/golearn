@@ -34,6 +34,8 @@ type Env map[Var]float64
 type Expr interface {
 	// Eval returns the value of this Expr in the environment env.
 	Eval(env Env) float64
+	// Check reports errors in this Expr and adds its Vars to the set.
+	Check(vars map[Var]bool) error
 }
 
 func (v Var) Eval(env Env) float64 {
