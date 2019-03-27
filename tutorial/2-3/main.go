@@ -21,7 +21,7 @@ func consts() {
 }
 
 func enums() {
-	// iota表达式，进行自增值枚举
+	// iota自增值种子，利用表达式，进行自增值枚举
 	const (
 		/*cpp = 0
 		java = 1
