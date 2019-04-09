@@ -43,6 +43,6 @@ func writeFile(filename string) {
 
 func main() {
 	//tryDefer()
-	writeFile("fib.txt")
+	writeFile("fib2.txt")
 	tryDefer2()
 }
